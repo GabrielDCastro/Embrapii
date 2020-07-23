@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Embrapii</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.js"></script>
+</head>
+<body>
+
+<div class="ui inverted attached menu">
+    <div class="ui container">
+    <a href="{% url 'home' %}" class="item">Covid Embrapii</a>
+    <a class="right menu">
+            <div class="ui search">
+                <div class="ui icon input">
+                    <input class="prompt" placeholder="Pesquisar..." type="text">
+                    <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+            </div>
+    </a>
+    </div>
+</div>
+
+<div class="ui hidden divider"></div>
+
+<div class="ui container">
+    <div class="ui stackable grid">
+
+
+          <div class="twelve wide column">
+              {% if clinetes %}
+                <h1 class="ui header">{{ clientes }}</h1>
+              {% endif%}
+
+              {% block conteudo %}
+              {% endblock %}
+          </div>
+
+    </div>
+</div>
+
+</body>
+</html>
