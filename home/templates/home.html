@@ -36,8 +36,8 @@
                 <h1 class="ui header">Nome: {{ cliente }}</h1>
               <div class="sixteen wide column">
                     <h2 class="ui header">Data: {{cliente.Nascimento}}</h2>
-                    <h2 class="ui header">Tipo de teste: {{TipoDeTeste}}</h2>
-                   <h2 class="ui header">Resultado: {{TResultadodoTeste}}</h2>
+                    <h2 class="ui header">Tipo de teste: {{cliente.Tipo_de_Teste_realizado}}</h2>
+                   <h2 class="ui header">Resultado: {{cliente.Resultado_do_Teste}}</h2>
               </div>
               {% endfor %}
 
